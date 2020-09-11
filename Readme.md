@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Аретм Комаров](https://up.htmlacademy.ru/htmlcss/29/user/1422707).
-* Наставник: [Алексей Заольников](https://htmlacademy.ru/profile/id870391).
+* Наставник: [Александр Карташов](https://htmlacademy.ru/profile/id77080).
 
 ---
 
