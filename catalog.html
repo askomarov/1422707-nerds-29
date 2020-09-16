@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <a class="header__logo">
+        <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»">
+      </a>
+      <ul class="header__menu">
+        <li><a class="header__link" href="blank.html">студия</a></li>
+        <li><a class="header__link" href="blank.html">клиенты</a></li>
+        <li><a class="header__link header__link--active">магазин</a></li>
+        <li><a class="header__link" href="blank.html">контакты</a></li>
+      </ul>
+      <a class="header__cart" href="blank.html">корзина</a>
+    </nav>
+  </header>
+  <main>
+    <section class="catalog">
+      <h1 class="catalog__title">Магазин готовых шаблонов</h1>
+      <form class="catalog__form catalog-form">
+        <!-- левая часть с фильтром -->
+        <div class="catalog-form__filter catalog-filter">
+          <div class="catalog-filter__item catalog-filter-range">
+            <h2 class="catalog-heading">Стоимость:</h2>
+            <div class="catalog-filter-range__controls">
+              <div class="catalog-filter-range__scale">
+                <div class="catalog-filter-range__bar"></div>
+              </div>
+              <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--min"></button>
+              <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--max"></button>
+            </div>
+            <div class="catalog-filter-range__price-controls">
+              <label class="min-price">от <input type="number" min="0" max="14999" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="number" max="15000" name="max-price" value="15000"></label>
+            </div>
+          </div>
+          <div class="catalog-filter__item catalog-filter-radio">
+            <h2 class="catalog-heading">Сетка:</h2>
+            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="adaptive" id="loss-weight"
+              checked>
+            <label class="catalog-filter-radio__label" for="grid-adaptive">Адаптивная</label>
+            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="fix" id="grid-fix">
+            <label class="catalog-filter-radio__label" for="grid-fix">Фиксированная</label>
+            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="stretch" id="grid-stretch">
+            <label class="catalog-filter-radio__label" for="grid-stretch">Резиновая</label>
+          </div>
+          <div class="catalog-filter__item catalog-filter-checkbox">
+            <h2 class="catalog-heading">Особенности:</h2>
+            <input class="catalog-filter-checkbox__input" type="checkbox" id="slider" name="slider" value="has-slider"
+              checked>
+            <label class="catalog-filter-checkbox__label" for="slider">Слайдер</label>
+            <input class="catalog-filter-checkbox__input" type="checkbox" id="features-block" name="features-block"
+              value="has-features-block">
+            <label class="catalog-filter-checkbox__label" for="features-block">Блок преимуществ</label>
+            <input class="catalog-filter-checkbox__input" type="checkbox" id="news" name="news" value="has-news"
+              checked>
+            <label class="catalog-filter-checkbox__label" for="news">Новости</label>
+            <input class="catalog-filter-checkbox__input" type="checkbox" id="gallery" name="gallery"
+              value="has-gallery">
+            <label class="catalog-filter-checkbox__label" for="gallery">Галерея</label>
+            <input class="catalog-filter-checkbox__input" type="checkbox" id="cart" name="cart" value="has-cart">
+            <label class="catalog-filter-checkbox__label" for="cart">Корзина</label>
+          </div>
+          <button type="submit" class="catalog-form__btn">показать</и>
+        </div>
+        <!-- правая часть основной контент -->
+        <div class="catalog-form__content catalog-content">
+          <div class="catalog-content__header">
+            <h2 class="catalog-heading">Сортировать:</h2>
+            <div class="catalog-content__sort catalog-sort">
+              <button type="button" class="catalog-sort__by-price">по цене</button>
+              <button type="button" class="catalog-sort__by-type">по типу</button>
+              <button type="button" class="catalog-sort__by-name">по названию</button>
+              <button type="button" class="catalog-sort__increase" aria-label="сортировать по возрастанию"></button>
+              <button type="button" class="catalog-sort__decrease" aria-label="сортировать по убыванию"></button>
+            </div>
+          </div>
+          <ul class="catalog-content__main-content catalog-main-content">
+            <li class="catalog-main-content__item catalog-item">
+              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+              <div class="catalog-item__img">
+                <img src="img/" alt="" />
+              </div>
+              <div class="catalog-item__hover-menu">
+                <p class="catalog-item__title">Sedona</p>
+                <p class="catalog-item__desc">Информационный сайт для туристов</p>
+                <button type="button" class="catalog-item__btn">9 900
+                  &#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-main-content__item catalog-item">
+              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+              <div class="catalog-item__img">
+                <img src="img/" alt="" />
+              </div>
+              <div class="catalog-item__hover-menu">
+                <p class="catalog-item__title">Pink</p>
+                <p class="catalog-item__desc">Информационный сайт для туристов</p>
+                <button type="button" class="catalog-item__btn">9 900
+                  &#8381;</button>
+              </div>
+            </li>
+            <li class="catalog-main-content__item catalog-item">
+              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+              <div class="catalog-item__img">
+                <img src="img/" alt="" />
+              </div>
+              <div class="catalog-item__hover-menu">
+                <p class="catalog-item__title">Barber-shop</p>
+                <p class="catalog-item__desc">Информационный сайт для туристов</p>
+                <button type="button" class="catalog-item__btn">9 900
+                  &#8381;</button>
+              </div>
+            </li>
+          </ul>
+          <ul class="catalog-main-content__pagination catalog-pagination">
+            <li class="catalog-pagination__item catalog-pagination__item--active">
+              <a class="catalog-pagination__link">1</a>
+            </li>
+            <li class="catalog-pagination__item">
+              <a class="catalog-pagination__link" href="#">2</a>
+            </li>
+            <li class="catalog-pagination__item">
+              <a class="catalog-pagination__link" href="#">3</a>
+            </li>
+            <li class="catalog-pagination__item">
+              <a class="catalog-pagination__link catalog-pagination__link--text">Следующая</a>
+            </li>
+          </ul>
+        </div>
+      </form>
+
+    </section>
+
+    <section class="contacts">
+      <div class="contacts__container">
+        <h1 class="visually-hidden">Наши контакты и карта где нас найти</h1>
+        <div class="contacts__text-block">
+          <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+          <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
+          <a href="" class="contacts__btn main-btn--contact">напишите нам</a>
+        </div>
+      </div>
+      <div id="map" class="contacts__map">
+        <svg width="100%" height="280" viewBox="0 0 360 280" fill="#C4C4C4">
+          <rect width="300" height="280" />
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <ul class="footer__social-list">
+        <li><a href="" class="footer__social-link">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="#C4C4C4">
+              <circle r="25" cx="25" cy="25" />
+            </svg>
+          </a></li>
+        <li><a href="" class="footer__social-link">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="#C4C4C4">
+              <circle r="25" cx="25" cy="25" />
+            </svg>
+          </a></li>
+        <li><a href="" class="footer__social-link">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="#C4C4C4">
+              <circle r="25" cx="25" cy="25" />
+            </svg>
+          </a></li>
+      </ul>
+      <div class="footer__text-column">
+        <p class="footer__main-text">Давайте дружить, это выгодно!</p>
+        <p class="footer__text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/scrtipt.js"></script>
+</body>
+
+</html>
