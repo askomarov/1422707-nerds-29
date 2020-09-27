@@ -46,120 +46,165 @@
   <main>
     <section class="catalog">
       <h1 class="catalog__title">Магазин готовых шаблонов</h1>
-      <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__form catalog-form">
-        <!-- левая часть с фильтром -->
-        <div class="catalog-form__filter catalog-filter">
-          <div class="catalog-filter__item catalog-filter-range">
-            <h2 class="catalog-form__heading">Стоимость:</h2>
-            <div class="catalog-filter-range__controls">
-              <div class="catalog-filter-range__scale">
-                <div class="catalog-filter-range__bar"></div>
+      <div class="catalog__container container">
+        <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__form catalog-form">
+          <!-- левая часть с фильтром -->
+          <div class="catalog-form__filter catalog-filter">
+            <div class="catalog-filter__item catalog-filter-range">
+              <h2 class="catalog-form__heading">Стоимость:</h2>
+              <div class="catalog-filter-range__controls">
+                <div class="catalog-filter-range__scale">
+                  <div class="catalog-filter-range__bar"></div>
+                </div>
+                <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--min"></button>
+                <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--max"></button>
               </div>
-              <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--min"></button>
-              <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--max"></button>
+              <div class="catalog-filter-range__price-controls">
+                <label class="label-price label-price--min">от <input class="input-price input-price--min" type="number" min="0" max="14999" name="min-price" value="0"></label>
+                <label class="label-price label-price--max">до <input class="input-price input-price--max" type="number" max="15000" name="max-price" value="15000"></label>
+              </div>
             </div>
-            <div class="catalog-filter-range__price-controls">
-              <label class="min-price">от <input type="number" min="0" max="14999" name="min-price" value="0"></label>
-              <label class="max-price">до <input type="number" max="15000" name="max-price" value="15000"></label>
+            <div class="catalog-filter__item catalog-filter-radio">
+              <h2 class="catalog-form__heading">Сетка:</h2>
+              <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="adaptive"
+                id="grid-adaptive" checked>
+              <label class="catalog-filter-radio__label" for="grid-adaptive">Адаптивная</label>
+              <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="fix" id="grid-fix">
+              <label class="catalog-filter-radio__label" for="grid-fix">Фиксированная</label>
+              <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="stretch"
+                id="grid-stretch">
+              <label class="catalog-filter-radio__label" for="grid-stretch">Резиновая</label>
             </div>
+            <div class="catalog-filter__item catalog-filter-checkbox">
+              <h2 class="catalog-form__heading">Особенности:</h2>
+              <input class="catalog-filter-checkbox__input" type="checkbox" id="slider" name="slider" value="has-slider"
+                checked>
+              <label class="catalog-filter-checkbox__label" for="slider">Слайдер</label>
+              <input class="catalog-filter-checkbox__input" type="checkbox" id="features-block" name="features-block"
+                value="has-features-block">
+              <label class="catalog-filter-checkbox__label" for="features-block">Блок преимуществ</label>
+              <input class="catalog-filter-checkbox__input" type="checkbox" id="news" name="news" value="has-news"
+                checked>
+              <label class="catalog-filter-checkbox__label" for="news">Новости</label>
+              <input class="catalog-filter-checkbox__input" type="checkbox" id="gallery" name="gallery"
+                value="has-gallery">
+              <label class="catalog-filter-checkbox__label" for="gallery">Галерея</label>
+              <input class="catalog-filter-checkbox__input" type="checkbox" id="cart" name="cart" value="has-cart">
+              <label class="catalog-filter-checkbox__label" for="cart">Корзина</label>
+            </div>
+            <button type="submit" class="catalog-form__btn main-btn">показать</button>
           </div>
-          <div class="catalog-filter__item catalog-filter-radio">
-            <h2 class="catalog-form__heading">Сетка:</h2>
-            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="adaptive" id="grid-adaptive"
-              checked>
-            <label class="catalog-filter-radio__label" for="grid-adaptive">Адаптивная</label>
-            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="fix" id="grid-fix">
-            <label class="catalog-filter-radio__label" for="grid-fix">Фиксированная</label>
-            <input class="catalog-filter-radio__input" type="radio" name="html-grid" value="stretch" id="grid-stretch">
-            <label class="catalog-filter-radio__label" for="grid-stretch">Резиновая</label>
-          </div>
-          <div class="catalog-filter__item catalog-filter-checkbox">
-            <h2 class="catalog-form__heading">Особенности:</h2>
-            <input class="catalog-filter-checkbox__input" type="checkbox" id="slider" name="slider" value="has-slider"
-              checked>
-            <label class="catalog-filter-checkbox__label" for="slider">Слайдер</label>
-            <input class="catalog-filter-checkbox__input" type="checkbox" id="features-block" name="features-block"
-              value="has-features-block">
-            <label class="catalog-filter-checkbox__label" for="features-block">Блок преимуществ</label>
-            <input class="catalog-filter-checkbox__input" type="checkbox" id="news" name="news" value="has-news"
-              checked>
-            <label class="catalog-filter-checkbox__label" for="news">Новости</label>
-            <input class="catalog-filter-checkbox__input" type="checkbox" id="gallery" name="gallery"
-              value="has-gallery">
-            <label class="catalog-filter-checkbox__label" for="gallery">Галерея</label>
-            <input class="catalog-filter-checkbox__input" type="checkbox" id="cart" name="cart" value="has-cart">
-            <label class="catalog-filter-checkbox__label" for="cart">Корзина</label>
-          </div>
-          <button type="submit" class="catalog-form__btn main-btn">показать</button>
-        </div>
-        <!-- правая часть основной контент -->
-        <div class="catalog-form__content catalog-content">
-          <div class="catalog-content__header">
-            <h2 class="catalog-form__heading">Сортировать:</h2>
-            <ul class="catalog-content__sort catalog-sort">
-              <li><a href="" class="catalog-sort__link catalog-sort__link--by-price">по цене</a></li>
-              <li><a href="" class="catalog-sort__link catalog-sort__link--by-type">по типу</a></li>
-              <li><a href="" class="catalog-sort__link catalog-sort__link--by-name">по названию</a></li>
-              <li><a href="" class="catalog-sort__link catalog-sort__link--increase"
-                  aria-label="сортировать по возрастанию"></a></li>
-              <li><a href="" class="catalog-sort__link catalog-sort__link--decrease"
-                  aria-label="сортировать по убыванию"></a></li>
+          <!-- правая часть основной контент -->
+          <div class="catalog-form__content catalog-content">
+            <div class="catalog-content__header">
+              <h2 class="catalog-form__heading">Сортировать:</h2>
+              <ul class="catalog-content__sort catalog-sort">
+                <li class="catalog-content__li"><a href=""
+                    class="catalog-sort__link catalog-sort__link--active  catalog-sort__link--by-price">по цене</a></li>
+                <li class="catalog-content__li"><a href="" class="catalog-sort__link catalog-sort__link--by-type">по
+                    типу</a></li>
+                <li class="catalog-content__li"><a href="" class="catalog-sort__link catalog-sort__link--by-name">по
+                    названию</a></li>
+                <li class="catalog-content__li"><a href=""
+                    class="catalog-sort__link catalog-sort__link--arrow catalog-sort__link--arrow-active catalog-sort__link--increase"
+                    aria-label="сортировать по возрастанию"></a></li>
+                <li class="catalog-content__li"><a href=""
+                    class="catalog-sort__link catalog-sort__link--arrow catalog-sort__link--decrease"
+                    aria-label="сортировать по убыванию"></a></li>
+              </ul>
+            </div>
+            <ul class="catalog-content__main-content catalog-main-content">
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-sedona.jpg" alt="превью сайта для туристов Sedona" width="358" height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">Sedona</h2>
+                  <p class="catalog-item__desc">Информационный сайт<br> для туристов</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-pink.jpg" alt="Превью сайт приложения PINK" width="358" height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">Pink</h2>
+                  <p class="catalog-item__desc">Продуктовый лендинг<br>приложения для iOS и Android</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-barbershop.jpg" alt="Превью сайта салон красоты Barber-shop" width="358"
+                    height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">Barber-shop</h2>
+                  <p class="catalog-item__desc">Сайт салона красоты. <br> Для мужчин, да.</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-mishka.jpg" alt="Превью сайт вязаных игрушек" width="358" height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">MISHKA</h2>
+                  <p class="catalog-item__desc">Интернет-магазин <br> вязаных игрушек</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-aplus.jpg" alt="Превью сайт повышения квалификации" width="358" height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">A Plus</h2>
+                  <p class="catalog-item__desc">Лендинг курсов повышения квалификации</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+              <li class="catalog-main-content__item catalog-item">
+                <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+                <div class="catalog-item__img">
+                  <img src="img/img-kvast.jpg" alt="Превью сайт кваса" width="358" height="578" />
+                </div>
+                <div class="catalog-item__hover-menu">
+                  <h2 class="catalog-item__title">КВАСТ</h2>
+                  <p class="catalog-item__desc">Промо-сайт производителя крафтового кваса</p>
+                  <button type="button" class="catalog-item__btn main-btn">9 900
+                    &#8381;</button>
+                </div>
+              </li>
+            </ul>
+            <ul class="catalog-main-content__pagination catalog-pagination">
+              <li class="catalog-pagination__item catalog-pagination__item--active">
+                <a class="catalog-pagination__link">1</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">2</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link" href="#">3</a>
+              </li>
+              <li class="catalog-pagination__item">
+                <a class="catalog-pagination__link catalog-pagination__link--text">Следующая</a>
+              </li>
             </ul>
           </div>
-          <ul class="catalog-content__main-content catalog-main-content">
-            <li class="catalog-main-content__item catalog-item">
-              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-              <div class="catalog-item__img">
-                <img src="img/" alt="" />
-              </div>
-              <div class="catalog-item__hover-menu">
-                <h2 class="catalog-item__title">Sedona</h2>
-                <p class="catalog-item__desc">Информационный сайт для туристов</p>
-                <button type="button" class="catalog-item__btn main-btn">9 900
-                  &#8381;</button>
-              </div>
-            </li>
-            <li class="catalog-main-content__item catalog-item">
-              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-              <div class="catalog-item__img">
-                <img src="img/" alt="" />
-              </div>
-              <div class="catalog-item__hover-menu">
-                <h2 class="catalog-item__title">Pink</h2>
-                <p class="catalog-item__desc">Информационный сайт для туристов</p>
-                <button type="button" class="catalog-item__btn main-btn">9 900
-                  &#8381;</button>
-              </div>
-            </li>
-            <li class="catalog-main-content__item catalog-item">
-              <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-              <div class="catalog-item__img">
-                <img src="img/" alt="" />
-              </div>
-              <div class="catalog-item__hover-menu">
-                <h2 class="catalog-item__title">Barber-shop</h2>
-                <p class="catalog-item__desc">Информационный сайт для туристов</p>
-                <button type="button" class="catalog-item__btn main-btn">9 900
-                  &#8381;</button>
-              </div>
-            </li>
-          </ul>
-          <ul class="catalog-main-content__pagination catalog-pagination">
-            <li class="catalog-pagination__item catalog-pagination__item--active">
-              <a class="catalog-pagination__link">1</a>
-            </li>
-            <li class="catalog-pagination__item">
-              <a class="catalog-pagination__link" href="#">2</a>
-            </li>
-            <li class="catalog-pagination__item">
-              <a class="catalog-pagination__link" href="#">3</a>
-            </li>
-            <li class="catalog-pagination__item">
-              <a class="catalog-pagination__link catalog-pagination__link--text">Следующая</a>
-            </li>
-          </ul>
-        </div>
-      </form>
+        </form>
+      </div>
 
     </section>
 
@@ -187,7 +232,7 @@
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a></li>
-          <li class="footer__social-list"><a href="" class="footer__social-link">
+        <li class="footer__social-list"><a href="" class="footer__social-link">
             <svg width="12" height="22">
               <use xlink:href="#icon-fb"></use>
             </svg>
