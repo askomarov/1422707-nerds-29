@@ -51,23 +51,14 @@
         <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__form catalog-form">
           <!-- левая часть с фильтром -->
           <div class="catalog-form__filter catalog-filter">
-            <div id="slider">
-              <input type="number" class="" name="" id="input-number">
-              <input type="number" class="" name="" id="input-number-2">
-            </div>
             <div class="catalog-filter__item catalog-filter-range">
               <h2 class="catalog-form__heading">Стоимость:</h2>
-              <div class="catalog-filter-range__controls">
-                <div class="catalog-filter-range__scale">
-                  <div class="catalog-filter-range__bar"></div>
-                </div>
-                <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--min"></button>
-                <button type="button" class="catalog-filter-range__toggle catalog-filter-range__toggle--max"></button>
+              <div id="slider">
               </div>
               <div class="catalog-filter-range__price-controls">
-                <label class="label-price label-price--min">от <input class="input-price input-price--min" type="number"
+                <label class="label-price label-price--min">от <input class="input-price input-price--min" id="input-number-2" type="number"
                     min="0" max="14999" name="min-price" value="0"></label>
-                <label class="label-price label-price--max">до <input class="input-price input-price--max" type="number"
+                <label class="label-price label-price--max">до <input class="input-price input-price--max" id="input-number" type="number"
                     max="15000" name="max-price" value="15000"></label>
               </div>
             </div>
