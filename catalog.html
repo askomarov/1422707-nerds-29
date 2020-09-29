@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nouislider.css">
   <title>HTML Academy: Нёрдс</title>
 </head>
 
@@ -50,6 +51,10 @@
         <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__form catalog-form">
           <!-- левая часть с фильтром -->
           <div class="catalog-form__filter catalog-filter">
+            <div id="slider">
+              <input type="number" class="" name="" id="input-number">
+              <input type="number" class="" name="" id="input-number-2">
+            </div>
             <div class="catalog-filter__item catalog-filter-range">
               <h2 class="catalog-form__heading">Стоимость:</h2>
               <div class="catalog-filter-range__controls">
@@ -264,6 +269,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/nouislider.js"></script>
   <script src="js/scrtipt.js"></script>
 </body>
 

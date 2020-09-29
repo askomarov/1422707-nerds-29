@@ -1337,3 +1337,46 @@ img {
   color: var(--basic-black);
   text-decoration: none;
 }
+
+.catalog #slider {
+  padding: 0 22px;
+}
+
+.catalog .noUi-connects {
+  background: #d7dcdf;
+  height: 2px;
+  top: 4px;
+}
+
+.catalog .noUi-connect {
+  height: 2px;
+  background: var(--btn-app-color);
+}
+
+.catalog .noUi-horizontal .noUi-handle {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: -8px;
+}
+
+.catalog .noUi-horizontal .noUi-handle:before, .catalog .noUi-horizontal .noUi-handle::after {
+  display: none;
+}
+
+.catalog .noUi-horizontal .noUi-handle:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #d7dcdf;
+}
+
+.catalog .noUi-horizontal .noUi-handle:focus {
+  outline: none;
+}
