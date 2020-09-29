@@ -18,7 +18,7 @@ html5Slider.noUiSlider.on('update', function (values, handle) {
   var value = values[handle];
 
   if (handle) {
-    inputNumber.value = value;
+    inputNumber.value = Math.round(value);
   } else {
     inputNumber2.value = Math.round(value);
   }
