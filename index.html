@@ -35,10 +35,10 @@
         </svg>
       </a>
       <ul class="header__menu">
-        <li><a class="header__link">студия</a></li>
-        <li><a class="header__link" href="">клиенты</a></li>
-        <li><a class="header__link" href="catalog.html">магазин</a></li>
-        <li><a class="header__link" href="">контакты</a></li>
+        <li class="header__menu-li"><a class="header__link">студия</a></li>
+        <li class="header__menu-li"><a class="header__link" href="">клиенты</a></li>
+        <li class="header__menu-li"><a class="header__link" href="catalog.html">магазин</a></li>
+        <li class="header__menu-li"><a class="header__link" href="">контакты</a></li>
       </ul>
       <a class="header__link header__cart" href="blank.html">корзина</a>
     </nav>
@@ -69,11 +69,11 @@
             </p>
             <a class="slider-item__btn main-btn" href="">узнать больше</a>
           </li>
-          <ul class="slider__dots">
-            <li><button type="button" class="slider__dot slider__dot--current" href="">1</button></li>
-            <li><button type="button" class="slider__dot" href="">2</button></li>
-            <li><button type="button" class="slider__dot" href="">3</button></li>
-          </ul>
+        </ul>
+        <ul class="promo__slider-dots slider-dots">
+          <li><button type="button" class="slider-dots__dot slider-dots__dot--current" href="">1</button></li>
+          <li><button type="button" class="slider-dots__dot" href="">2</button></li>
+          <li><button type="button" class="slider-dots__dot" href="">3</button></li>
         </ul>
       </div>
     </section>
@@ -117,7 +117,8 @@
           </ul>
         </div>
         <div class="about-us__column">
-          <img class="about-us__img" src="img/main-logo.jpg" width="360" height="208">
+          <img class="about-us__img" src="img/main-logo.jpg" width="360" height="208"
+            alt="красочный логотип студии Nerds">
           <p class="about-us__text about-us__text--bold about-us__text--upper about-us__text--centr">с 2004 года Любим
             точность во всем:</p>
           <dl class="about-us__stats about-us-stats">
@@ -144,19 +145,19 @@
         <ul class="our-clients__list">
           <li class="our-clients__li">
             <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-htmlacademy.png"
-                alt="" width="150" height="50"></a>
+                alt="логотоип сайта HTMLAcademy" width="150" height="50"></a>
           </li>
           <li class="our-clients__li">
-            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-borodinski.png" alt=""
-                width="150" height="50"></a>
+            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-borodinski.png"
+                alt="логотоип салона красоты для мужчин Barber-shop" width="150" height="50"></a>
           </li>
           <li class="our-clients__li">
-            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-pink.png" alt=""
-                width="150" height="50"></a>
+            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-pink.png"
+                alt="логотоип мобильного приложения Pink" width="150" height="50"></a>
           </li>
           <li class="our-clients__li">
-            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-mishka.png" alt=""
-                width="150" height="50"></a>
+            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-mishka.png"
+                alt="логотоип интернет-магазина вязаных игрушек Mishka" width="150" height="50"></a>
           </li>
         </ul>
       </div>
@@ -186,7 +187,7 @@
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a></li>
-          <li class="footer__social-list"><a href="" class="footer__social-link">
+        <li class="footer__social-list"><a href="" class="footer__social-link">
             <svg width="12" height="22">
               <use xlink:href="#icon-fb"></use>
             </svg>
