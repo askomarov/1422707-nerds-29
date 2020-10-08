@@ -48,13 +48,12 @@
       <h1 class="visually-hidden">Проект дизайн-студии HTML Academy: Глейси</h1>
       <div class="promo__container container">
         <ul class="promo__slider slider">
-          <li class="slider__item slider-item slider-item--1">
+          <li class="slider__item slider-item slider-item--1 slider-item--current">
             <p class="slider-item__title">Долго, дорого,<br> скрупулезно.</p>
             <p class="slider-item__text">Математически выверенный дизайн <br> для вашего сайта или мобильного
               приложения.
             </p>
             <a class="slider-item__btn main-btn" href="">узнать больше</a>
-            <!-- <img class="slider-item__img" src="img/bg-slide-01.png" alt="" width="760" height="431" /> -->
           </li>
           <li class="slider__item slider-item slider-item--2">
             <p class="slider-item__title">Любим математику <br> как никто другой</p>
@@ -83,17 +82,17 @@
         <ul class="work__content">
           <li class="work__item work-item work-item--sites">
             <h2 class="work-item__title">Веб-сайты</h2>
-            <div class="work-item__text">Мир никогда не будет прежним после того как увидит ваш сайт!</div>
+            <p class="work-item__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
             <a href="" class="work-item__btn main-btn">заказать</a>
           </li>
           <li class="work__item work-item work-item--app">
             <h2 class="work-item__title">Приложения</h2>
-            <div class="work-item__text">Покорите топ-10 приложений в AppStore и Google Play</div>
+            <p class="work-item__text">Покорите топ-10 приложений<br> в AppStore и Google Play</p>
             <a href="" class="work-item__btn main-btn main-btn--app">заказать</a>
           </li>
           <li class="work__item work-item work-item--present">
             <h2 class="work-item__title">Презентации</h2>
-            <div class="work-item__text">Вы даже не подозреваете, насколько вы изумительны!</div>
+            <p class="work-item__text">Вы даже не подозреваете, насколько вы изумительны!</p>
             <a href="" class="work-item__btn main-btn main-btn--present">заказать</a>
           </li>
         </ul>
@@ -109,16 +108,19 @@
           </h2>
           <p class="about-us__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше
             креатива. Работаем не покладая рук, как роботы.</p>
-          <p class="about-us__text about-us__text--bold about-us__text--upper">Выполняем заказы на разработку:</p>
+          <p class="about-us__text about-us__text--bold about-us__text--upper about-us__list-title">Выполняем заказы на
+            разработку:</p>
           <ul class="about-us__list-work">
             <li class="about-us__item-work">Веб-сайтов любой сложности</li>
             <li class="about-us__item-work">Мобильных приложений для iOS и Android</li>
             <li class="about-us__item-work">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
-        <div class="about-us__column">
-          <img class="about-us__img" src="img/main-logo.jpg" width="360" height="208"
-            alt="красочный логотип студии Nerds">
+        <div class="about-us__column about-us__column--right">
+          <div class="about-us__img-wrapper">
+            <img class="about-us__img" src="img/main-logo.jpg" width="360" height="208"
+              alt="красочный логотип студии Nerds">
+          </div>
           <p class="about-us__text about-us__text--bold about-us__text--upper about-us__text--centr">с 2004 года Любим
             точность во всем:</p>
           <dl class="about-us__stats about-us-stats">
@@ -144,20 +146,20 @@
       <div class="our-clients__container container">
         <ul class="our-clients__list">
           <li class="our-clients__li">
-            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-htmlacademy.png"
-                alt="логотоип сайта HTMLAcademy" width="150" height="50"></a>
+            <a class="our-clients__item-link our-clients__item-link--academy" href=""><img class="our-clients__img" src="img/logo-htmlacademy.png"
+                alt="логотоип сайта HTMLAcademy" width="199" height="68"></a>
           </li>
           <li class="our-clients__li">
             <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-borodinski.png"
-                alt="логотоип салона красоты для мужчин Barber-shop" width="150" height="50"></a>
+                alt="логотоип салона красоты для мужчин Barber-shop" width="209" height="90"></a>
           </li>
           <li class="our-clients__li">
             <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-pink.png"
-                alt="логотоип мобильного приложения Pink" width="150" height="50"></a>
+                alt="логотоип мобильного приложения Pink" width="185" height="52"></a>
           </li>
           <li class="our-clients__li">
-            <a class="our-clients__item-link" href=""><img class="our-clients__img" src="img/logo-mishka.png"
-                alt="логотоип интернет-магазина вязаных игрушек Mishka" width="150" height="50"></a>
+            <a class="our-clients__item-link our-clients__item-link--mishka" href=""><img class="our-clients__img" src="img/logo-mishka.png"
+                alt="логотоип интернет-магазина вязаных игрушек Mishka" width="173" height="84"></a>
           </li>
         </ul>
       </div>
@@ -168,7 +170,7 @@
         <h2 class="visually-hidden">Наши контакты и карта где нас найти</h2>
         <div class="contacts__text-block">
           <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
-          <p class="contacts__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class="contacts__text">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
           <a class="contacts__tel-link" href="tel:88122757575">тел. +7 (812) 275-75-75</a>
           <a href="" class="contacts__btn main-btn">напишите нам</a>
         </div>
