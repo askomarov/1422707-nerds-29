@@ -68,3 +68,48 @@ if (slider != null) {
   promoSlider();
 } else {
 };
+
+// модальное окно обратной связи
+let contactsPopup = document.querySelector(".contacts-popup ");
+if (contactsPopup != null) {
+  let contactBody = contactsPopup.querySelector(".contacts-popup__body");
+  let popupBtn = document.querySelector(".contacts__btn");
+  popupBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    contactsPopup.classList.add("contacts-popup--open");
+  });
+  let contactsPopupClose = document.querySelector(".contacts-popup__close");
+  contactsPopupClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    contactsPopup.classList.remove("contacts-popup--open");
+    contactBody.classList.remove("contacts-popup__body--error");
+    contactsForm.reset();
+  });
+  let contactsForm = contactsPopup.querySelector(".contacts-popup__form");
+  let loginName = contactsPopup.querySelector("#contact-name");
+  let loginEmail = contactsPopup.querySelector("#contact-email");
+  contactsForm.addEventListener("submit", function (evt) {
+    if (!loginName.value || !loginEmail.value) {
+      evt.preventDefault();
+      contactBody.classList.remove("contacts-popup__body--error");
+      contactBody.offsetWidth = contactBody.offsetWidth;
+      contactBody.classList.add("contacts-popup__body--error");
+      if (!loginName.value) {
+        loginName.classList.add("main-input--error");
+      } else loginName.classList.remove("main-input--error");
+    } else {
+      localStorage.setItem("login", loginName.value);
+    }
+  });
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (contactsPopup.classList.contains("contacts-popup--open")) {
+        evt.preventDefault();
+        contactsPopup.classList.remove("contacts-popup--open");
+        contactBody.classList.remove("contacts-popup__body--error");
+        loginName.classList.remove("main-input--error");
+      }
+    }
+  });
+};
+
