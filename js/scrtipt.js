@@ -60,6 +60,10 @@ let promoSlider = function () {
         slides[0].classList.remove('slider-item--current');
         slides[1].classList.remove('slider-item--current');
       }
+      let slider = document.querySelector(".slider");
+      let sliderCurrent = document.querySelector(".slider-item--current");
+      let heightSliderCurrent = sliderCurrent.offsetHeight;
+      slider.style.height = heightSliderCurrent + "px";
     };
   }
 };
