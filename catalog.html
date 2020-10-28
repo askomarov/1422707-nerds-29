@@ -261,6 +261,31 @@
       </div>
     </div>
   </footer>
+  <section class="contacts-popup">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <div class="contacts-popup__body">
+      <button type="button" class="contacts-popup__close" aria-label="закрыть попап"></button>
+      <form class="contacts-popup__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="contacts-popup__title">Напишите нам</p>
+        <label class="contacts-popup__label contacts-popup__label--name" for="contact-name"><span
+            class="contacts-popup__label-text">Ваше имя:</span>
+          <input class="contacts-popup__input main-input" type="text" name="contact-name" id="contact-name"
+            placeholder="Имя Фамилия" autocomplete="off">
+        </label>
+        <label class="contacts-popup__label contacts-popup__label--mail" for="contact-email"><span
+            class="contacts-popup__label-text">Ваш email:</span>
+          <input class="contacts-popup__input main-input" type="email" name="contact-email" id="contact-email"
+            placeholder="email@example.com">
+        </label>
+        <label class="contacts-popup__label contacts-popup__label--textarea" for="contact-comment"><span
+            class="contacts-popup__label-text">Текст письма:</span>
+          <textarea class="contacts-popup__textarea main-input" autocomplete="off" name="contact-comment"
+            maxlength="200" id="contact-comment" placeholder="В свободной форме"></textarea>
+        </label>
+        <button class="contacts-popup__submit main-btn" type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
   <script src="js/nouislider.min.js"></script>
   <script src="js/scrtipt.min.js"></script>
 </body>

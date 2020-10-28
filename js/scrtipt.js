@@ -3,11 +3,11 @@ if (catalogPage != null) {
   var html5Slider = document.querySelector('#slider');
 
   noUiSlider.create(html5Slider, {
-    start: [10, 15000],
+    start: [0, 15000],
     connect: true,
     range: {
       "min": 0,
-      "max": 20000
+      "max": 21500
     }
   });
 
