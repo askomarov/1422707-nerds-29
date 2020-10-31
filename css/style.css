@@ -413,6 +413,7 @@ img {
   font-size: 55px;
   line-height: 55px;
   margin: 0 0 26px;
+  max-width: 530px;
 }
 
 .slider-item__text {
@@ -421,6 +422,7 @@ img {
   line-height: 25px;
   color: var(--text-color);
   margin: 0 0 37px;
+  max-width: 530px;
 }
 
 .slider-item__btn {
@@ -805,7 +807,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   max-width: 360px;
-  flex: 0 1 360px;
+  flex: 0 0 360px;
 }
 
 .footer__social-list {
@@ -1004,6 +1006,11 @@ img {
   line-height: 22px;
   padding-left: 16px;
   margin-left: 11px;
+  -moz-appearance: textfield;
+}
+
+.input-price::-webkit-outer-spin-button, .input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .catalog-filter-radio {
