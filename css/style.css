@@ -1573,7 +1573,7 @@ img {
 }
 
 .noUi-state-drag * {
-  cursor: inherit !important;
+  cursor: inherit;
 }
 
 /* Slider size and handle placement;
